@@ -1,19 +1,20 @@
-# fly.toml file generated for quiet-frog-6358 on 2022-10-23T00:46:30Z
+# fly.toml file generated for quiet-frog-6358 on 2022-10-23T01:04:32Z
 
 app = "quiet-frog-6358"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
+[build]
+  builder = "paketobuildpacks/builder:base"
+  buildpacks = ["gcr.io/paketo-buildpacks/go"]
+
 [env]
+  PORT = "8080"
 
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
-
-[build]
-  builder = "paketobuildpacks/builder:base"
-  buildpacks = ["gcr.io/paketo-buildpacks/go"]
 
 [[services]]
   http_checks = []
