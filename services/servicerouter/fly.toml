@@ -8,14 +8,3 @@ app = "proud-dust-984"
 
 [env]
   PORT = "50051"
-
-[[services]]
-  internal_port = 50051
-  protocol = "tcp"
-
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-
-  [[services.ports]]
-    port = 50051
