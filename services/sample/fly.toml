@@ -1,9 +1,6 @@
 # fly.toml file generated for red-dust-2147 on 2022-10-23T01:12:05Z
 
 app = "red-dust-2147"
-kill_signal = "SIGINT"
-kill_timeout = 5
-processes = []
 
 [build]
   builder = "paketobuildpacks/builder:base"
@@ -11,18 +8,12 @@ processes = []
 
 [env]
   PORT = "8080"
-  SERVICE_ROUTER_ADDRESS = "red-dust-2147.internal:443"
-
-[experimental]
-  allowed_public_ports = []
-  auto_rollback = true
+  SERVICE_ROUTER_ADDRESS = "red-dust-2147.internal:50051"
 
 [[services]]
-  http_checks = []
   internal_port = 8080
-  processes = ["app"]
   protocol = "tcp"
-  script_checks = []
+
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
@@ -36,9 +27,3 @@ processes = []
   [[services.ports]]
     handlers = ["tls", "http"]
     port = 443
-
-  [[services.tcp_checks]]
-    grace_period = "1s"
-    interval = "15s"
-    restart_limit = 0
-    timeout = "2s"
