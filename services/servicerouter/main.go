@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"strconv"
 	"os"
+	"strconv"
 
-	"google.golang.org/grpc"
 	pb "github.com/phucvin/project-teneng/services/servicerouter/servicerouter/proto"
+	"google.golang.org/grpc"
 )
 
 // server is used to implement servicerouter.ServiceRouterServer.
@@ -24,10 +24,10 @@ func (s *server) Invoke(ctx context.Context, in *pb.InvokeRequest) (*pb.InvokeRe
 }
 
 func main() {
-    port, err := strconv.Atoi(os.Getenv("PORT"))
-    if err != nil {
+	port, err := strconv.Atoi(os.Getenv("PORT"))
+	if err != nil {
 		port = 50051
-    }
+	}
 
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 	if err != nil {
