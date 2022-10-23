@@ -8,7 +8,7 @@ app = "red-dust-2147"
 
 [env]
   PORT = "8080"
-  SERVICE_ROUTER_ADDRESS = "red-dust-2147.internal:50051"
+  SERVICE_ROUTER_ADDRESS = "proud-dust-984.internal:50051"
 
 [[services]]
   internal_port = 8080
