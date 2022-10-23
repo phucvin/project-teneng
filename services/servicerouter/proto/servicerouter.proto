@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/phucvin/project-teneng/services/servicerouter";
+
+package servicerouter;
+
+// The ServiceRouter service definition.
+service ServiceRouter {
+  // Invokes a request.
+  rpc Invoke(InvokeRequest) returns (InvokeResponse) {}
+}
+
+// The request message containing the user's name.
+message InvokeRequest {
+  string description = 1;
+}
+
+// The response message containing the greetings
+message InvokeResponse {
+  string description = 1;
+}
