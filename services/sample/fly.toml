@@ -11,6 +11,7 @@ processes = []
 
 [env]
   PORT = "8080"
+  SERVICE_ROUTER_ADDRESS = "red-dust-2147.internal:443"
 
 [experimental]
   allowed_public_ports = []

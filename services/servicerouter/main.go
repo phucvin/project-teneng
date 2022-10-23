@@ -8,7 +8,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb "github.com/phucvin/project-teneng/services/servicerouter/servicerouter"
+	pb "github.com/phucvin/project-teneng/services/servicerouter/servicerouter/proto"
 )
 
 var (
