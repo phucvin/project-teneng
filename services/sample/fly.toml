@@ -1,6 +1,6 @@
-# fly.toml file generated for quiet-frog-6358 on 2022-10-23T01:04:32Z
+# fly.toml file generated for red-dust-2147 on 2022-10-23T01:12:05Z
 
-app = "quiet-frog-6358"
+app = "red-dust-2147"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

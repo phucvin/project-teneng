@@ -14,7 +14,7 @@ func main() {
     }
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, this is a sample app, serving from %s", os.Getenv("FLY_REGION"))
+		fmt.Fprintf(w, "[1] Hello, this is a sample app, serving from %s", os.Getenv("FLY_REGION"))
     })
 
     log.Println("listening on", port)
